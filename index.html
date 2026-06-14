@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Rameshwar Paradise | Perfect Venues for Every Occasion</title>
+    <meta name="description" content="Celebrate life's beautiful moments in our elegant lawns, banquet spaces, and luxurious rooms in Varanasi.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= VARIABLES ================= */
+        :root {
+            --primary: #0F3D2E;    /* Deep Royal Green */
+            --secondary: #C9A24D;  /* Luxury Gold */
+            --bg-color: #FFFDF8;   /* Warm Ivory */
+            --text-main: #1F1F1F;  /* Rich Charcoal */
+            --text-light: #F0F0F0;
+            --white: #FFFFFF;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(201, 162, 77, 0.3);
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* ================= RESET & GLOBAL ================= */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 14.5px; }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            font-weight: 300;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 { 
+            font-family: var(--font-heading); 
+            font-weight: 500; 
+            color: var(--primary); 
+            letter-spacing: 0.5px; 
+        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .section-padding { padding: 100px 0; }
+        .text-center { text-align: center; }
+
+        /* Typography & Utilities */
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 500;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        .section-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 4rem;
+            font-style: italic;
+            font-family: var(--font-heading);
+            letter-spacing: 1px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+        .btn-gold {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+        .btn-gold:hover {
+            background-color: transparent;
+            border-color: var(--secondary);
+            color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--white);
+            color: var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal { opacity: 0; transform: translateY(40px); transition: 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* ================= NAVBAR ================= */
+        header.navbar {
+            height: 75px;
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 1000;
+            padding: 0px 0;
+            transition: var(--transition);
+            background: rgba(15, 61, 46, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        header.navbar.scrolled { padding: 0; box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+        
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1400px; margin: 0 auto; }
+        .logo { display: block; height: 75px; transition: var(--transition); }
+        .logo img { height: 100%; width: auto; display: block; object-fit:cover; }
+        header.navbar.scrolled .logo { height: 75px; }
+        
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links li a { color: var(--white); font-weight: 400; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); position: relative; }
+        .nav-links li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--secondary); transition: var(--transition); }
+        .nav-links li a:hover::after { width: 100%; }
+        .nav-links li a:hover { color: var(--secondary); }
+        
+        .mobile-toggle { display: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
+
+        /* ================= HERO SECTION ================= */
+        #hero { position: relative; height: 100vh; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+        .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.5s ease-in-out; background-size: cover; background-position: center; }
+        .hero-slide.active { opacity: 1; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(15, 61, 46, 0.4), rgba(0,0,0,0.8)); z-index: 2; }
+        
+        .hero-content { position: relative; z-index: 3; text-align: center; color: var(--white); max-width: 800px; padding: 0 20px; animation: fadeIn 1.5s ease-out forwards; }
+        .hero-content h1 { font-size: 3.8rem; color: var(--white); margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); font-weight: 500; letter-spacing: 1px; }
+        .hero-content h2 { font-size: 1.4rem; color: var(--secondary); margin-bottom: 20px; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; }
+        .hero-content p { font-size: 1.1rem; margin-bottom: 40px; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); font-weight: 300; line-height: 1.8; }
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+        /* ================= VENUE HIGHLIGHTS (PREMIUM REDESIGN) ================= */
+        #highlights { 
+            background-color: var(--primary); 
+            padding: 80px 0; 
+            position: relative;
+        }
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            border-top: 1px solid rgba(201, 162, 77, 0.2);
+            border-left: 1px solid rgba(201, 162, 77, 0.2);
+            margin-bottom: 30px;
+        }
+        .stat-item { 
+            padding: 50px 20px; 
+            text-align: center;
+            border-right: 1px solid rgba(201, 162, 77, 0.2);
+            border-bottom: 1px solid rgba(201, 162, 77, 0.2);
+            transition: var(--transition);
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .stat-item:hover { 
+            background: rgba(201, 162, 77, 0.03); 
+        }
+        .stat-number { 
+            font-family: var(--font-heading); 
+            font-size: 3.5rem; 
+            color: var(--secondary); 
+            margin-bottom: 10px; 
+            font-weight: 400; 
+            line-height: 1;
+        }
+        .stat-text { 
+            font-family: var(--font-body); 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            color: rgba(255,255,255,0.7); 
+        }
+
+        /* ================= ABOUT US ================= */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-img { position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .about-img img { width: 100%; transition: var(--transition); }
+        .about-img:hover img { transform: scale(1.05); }
+        .about-content h2 { font-size: 2.2rem; margin-bottom: 20px; }
+        .about-content p { margin-bottom: 20px; color: #555; text-align: justify; font-size: 0.95rem; }
+
+        /* ================= WHY CHOOSE US ================= */
+        #features { background-color: #F8F5EE; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .feature-item { display: flex; align-items: center; gap: 15px; background: var(--white); padding: 20px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-left: 4px solid var(--secondary); transition: var(--transition); }
+        .feature-item:hover { transform: translateX(10px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .feature-icon { background: var(--primary); color: var(--secondary); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; }
+
+        /* ================= FACILITIES & SPACES ================= */
+        .facilities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .facility-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.08); transition: var(--transition); }
+        .facility-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .facility-img { height: 250px; overflow: hidden; position: relative; }
+        .facility-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .facility-card:hover .facility-img img { transform: scale(1.1); }
+        .facility-content { padding: 30px; }
+        .facility-content h3 { font-size: 1.8rem; margin-bottom: 10px; }
+        .capacity-badge { display: inline-block; background: var(--primary); color: var(--secondary); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; }
+        .facility-content p { color: #666; margin-bottom: 20px; }
+
+        /* Showcase Sections (Crown, Sagwan, Banquet) */
+        .showcase-section { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 80vh; background: var(--white); }
+        .showcase-section.reverse { grid-template-columns: 1fr 1fr; direction: rtl; }
+        .showcase-section.reverse > * { direction: ltr; }
+        /* .showcase-img { background-size:contain; background-position: center; background-attachment: fixed; min-height: 400px; } */
+        .showcase-text { padding: 80px; display: flex; flex-direction: column; justify-content: center; }
+        .showcase-text h2 { font-size: 2.8rem; margin-bottom: 15px; }
+        .showcase-list { margin: 20px 0; }
+        .showcase-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .showcase-list li::before { content: '✓'; color: var(--secondary); font-weight: bold; }
+        .price-tag { font-size: 1.5rem; color: var(--primary); font-family: var(--font-heading); font-weight: bold; margin: 20px 0; }
+
+        /* ================= EVENT PACKAGES (STUNNING REDESIGN) ================= */
+        #packages { 
+            background: linear-gradient(135deg, var(--primary) 0%, #061c14 100%); 
+            color: var(--white); 
+            position: relative;
+            z-index: 1;
+        }
+        #packages::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(201, 162, 77, 0.08) 0%, transparent 70%);
+            z-index: -1; pointer-events: none;
+        }
+        #packages h2 { color: var(--secondary); }
+        
+        .pricing-grid { 
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; align-items: stretch;
+        }
+        .pricing-grid.bottom-row {
+            display: flex; justify-content: center; flex-wrap: wrap; margin-top: 30px; gap: 30px;
+        }
+        .pricing-grid.bottom-row .pricing-card {
+            width: calc(50% - 15px); max-width: 450px;
+        }
+        
+        .pricing-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(201, 162, 77, 0.2); 
+            padding: 50px 30px; text-align: center; position: relative; transition: var(--transition);
+            display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden;
+            backdrop-filter: blur(10px);
+            border-radius: 4px;
+        }
+        
+        /* Elegant Corner Accents */
+        .pricing-card::before, .pricing-card::after {
+            content: ''; position: absolute; width: 40px; height: 40px; border-color: var(--secondary); border-style: solid; transition: 0.8s cubic-bezier(0.25, 1, 0.5, 1); opacity: 0;
+        }
+        .pricing-card::before { top: 15px; left: 15px; border-width: 1px 0 0 1px; }
+        .pricing-card::after { bottom: 15px; right: 15px; border-width: 0 1px 1px 0; }
+        .pricing-card:hover::before, .pricing-card:hover::after { opacity: 1; width: calc(100% - 30px); height: calc(100% - 30px); }
+
+        .pricing-card:hover { 
+            transform: translateY(-10px); 
+            background: rgba(255, 255, 255, 0.06); 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3); 
+            border-color: rgba(201, 162, 77, 0.5); 
+        }
+        
+        .popular-badge { 
+            position: absolute; top: 25px; right: -45px; background: var(--secondary); color: var(--primary); 
+            padding: 8px 50px; font-size: 0.65rem; letter-spacing: 2px; font-weight: 600; text-transform: uppercase; 
+            transform: rotate(45deg); box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 5;
+        }
+
+        .pack-title { font-size: 1.8rem; font-family: var(--font-heading); margin-bottom: 5px; color: var(--secondary); font-weight: 400; position: relative; z-index: 2; }
+        .pack-subtitle { font-size: 0.75rem; letter-spacing: 2px; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-bottom: 30px; position: relative; z-index: 2; }
+        
+        .pack-price { font-size: 2.8rem; font-weight: 300; margin-bottom: 30px; font-family: var(--font-heading); color: var(--white); display: flex; align-items: center; justify-content: center; gap: 5px; position: relative; z-index: 2; }
+        .pack-price span { font-size: 1.2rem; color: var(--secondary); font-family: var(--font-body); transform: translateY(-10px); }
+        
+        .pack-features { margin-bottom: 40px; text-align: center; flex-grow: 1; position: relative; z-index: 2; }
+        .pack-features li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.9rem; color: rgba(255,255,255,0.8); letter-spacing: 0.5px; transition: var(--transition); }
+        .pack-features li:hover { color: var(--white); background: rgba(201, 162, 77, 0.03); }
+        .pack-features li:last-child { border: none; }
+        
+        .btn-package { width: 100%; padding: 15px; font-size: 0.85rem; letter-spacing: 2px; margin-top: auto; position: relative; z-index: 2; border: 1px solid var(--secondary); background: transparent; color: var(--secondary); }
+        .btn-package:hover { background: var(--secondary); color: var(--white); }
+
+        /* ================= PREMIUM GALLERY ================= */
+        #gallery { background: var(--bg-color); }
+        .gallery-tabs-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 40px; }
+        .gallery-tab { background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 10px 25px; border-radius: 30px; cursor: pointer; font-family: var(--font-body); font-weight: 500; transition: var(--transition); }
+        .gallery-tab.active, .gallery-tab:hover { background: var(--primary); color: var(--secondary); }
+        
+        .gallery-content-area { position: relative; height: 700px; border-radius: 15px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+        .gallery-slider-group { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; transition: opacity 0.5s ease; }
+        .gallery-slider-group.active { opacity: 1; pointer-events: all; z-index: 10; }
+        .g-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.5s ease; background-size: cover; background-position: center; cursor: zoom-in; }
+        .g-slide.active { opacity: 1; }
+        .g-caption { position: absolute; bottom: 30px; left: 30px; background: rgba(15, 61, 46, 0.8); color: var(--white); padding: 10px 20px; border-radius: 5px; border-left: 3px solid var(--secondary); backdrop-filter: blur(5px); }
+        
+        /* Lightbox */
+        #lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; display: none; align-items: center; justify-content: center; flex-direction: column; opacity: 0; transition: opacity 0.3s ease; }
+        #lightbox.show { display: flex; opacity: 1; }
+        #lightbox img { max-width: 90%; max-height: 80vh; border: 2px solid var(--secondary); border-radius: 5px; }
+        .lightbox-close { position: absolute; top: 20px; right: 30px; color: var(--white); font-size: 40px; cursor: pointer; transition: color 0.3s; }
+        .lightbox-close:hover { color: var(--secondary); }
+
+        /* ================= TESTIMONIALS (PREMIUM REDESIGN) ================= */
+        #testimonials { background: var(--bg-color); overflow: hidden; position: relative; z-index: 1; }
+        .testi-container-inner { max-width: 900px; margin: 0 auto; position: relative; }
+        .testi-carousel-wrapper { overflow: hidden; padding: 40px 0; }
+        .testi-carousel { display: flex; transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); width: 100%; }
+        
+        .testi-card { 
+            flex: 0 0 100%; 
+            width: 100%;
+            background: var(--white); 
+            padding: 60px 40px; 
+            border-radius: 8px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.04); 
+            text-align: center;
+            border: 1px solid rgba(201, 162, 77, 0.2);
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        
+        .testi-quote-icon {
+            font-family: var(--font-heading);
+            font-size: 5rem;
+            color: var(--secondary);
+            opacity: 0.3;
+            line-height: 0.5;
+            margin-bottom: 20px;
+        }
+        
+        .stars { color: var(--secondary); font-size: 1.2rem; margin-bottom: 25px; letter-spacing: 5px; }
+        .testi-text { font-style: italic; color: var(--text-main); margin-bottom: 35px; font-size: 1.15rem; line-height: 1.9; font-weight: 300; max-width: 700px; }
+        
+        .testi-author { font-family: var(--font-heading); font-weight: 500; color: var(--primary); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; }
+        .testi-author::before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 1px;
+            background: var(--secondary);
+            margin: 0 auto 15px auto;
+        }
+
+        /* ================= BOOKING WIZARD ================= */
+        #booking { background: linear-gradient(rgba(15, 61, 46, 0.9), rgba(15, 61, 46, 0.9)), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80') center/cover fixed; color: var(--white); }
+        #booking h2 { color: var(--secondary); }
+        .booking-container { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border: 1px solid var(--glass-border); border-radius: 15px; padding: 40px; max-width: 800px; margin: 0 auto; box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .booking-type-toggle { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; }
+        .type-btn { background: transparent; border: 1px solid var(--secondary); color: var(--white); padding: 10px 30px; border-radius: 30px; cursor: pointer; transition: var(--transition); }
+        .type-btn.active { background: var(--secondary); color: var(--primary); font-weight: bold; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--secondary); }
+        input, select, textarea { width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: var(--white); border-radius: 5px; font-family: var(--font-body); transition: var(--transition); }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--secondary); background: rgba(255,255,255,0.15); }
+        input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.5); }
+        select option { background: var(--primary); color: var(--white); }
+        .form-section { display: none; }
+        .form-section.active { display: block; animation: fadeIn 0.5s; }
+
+        /* ================= ROOM BOOKING OPTIONS ================= */
+        .room-partners { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .partner-card { background: var(--white); padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #eee; }
+        .partner-title { font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary); margin-bottom: 10px; }
+        .partner-price { color: var(--secondary); font-weight: bold; margin-bottom: 20px; }
+
+        /* ================= CONTACT & LOCATION ================= */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; background: var(--white); padding: 50px; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
+        .contact-info h3 { font-size: 2rem; margin-bottom: 20px; }
+        .contact-item { display: flex; gap: 15px; margin-bottom: 25px; align-items: flex-start; }
+        .contact-icon { color: var(--secondary); font-size: 1.5rem; margin-top: 5px; }
+        .contact-text h4 { font-family: var(--font-body); font-size: 1.1rem; margin-bottom: 5px; }
+        .contact-text p, .contact-text a { color: #555; transition: color 0.3s; }
+        .contact-text a:hover { color: var(--primary); }
+        .map-container { border-radius: 10px; overflow: hidden; height: 100%; min-height: 350px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        /* ================= FOOTER ================= */
+        footer { background: var(--primary); color: var(--text-light); padding: 80px 0 20px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
+        .footer-about h3 { color: var(--secondary); font-family: var(--font-heading); font-size: 2rem; margin-bottom: 15px; }
+        .footer-about p { margin-bottom: 20px; opacity: 0.8; }
+        .footer-links h4 { color: var(--white); margin-bottom: 20px; font-size: 1.2rem; }
+        .footer-links ul li { margin-bottom: 10px; }
+        .footer-links ul li a { transition: var(--transition); opacity: 0.8; }
+        .footer-links ul li a:hover { color: var(--secondary); opacity: 1; padding-left: 5px; }
+        .copyright { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.6; font-size: 0.9rem; }
+
+        /* ================= FLOATING ELEMENTS ================= */
+        .fab-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 999; }
+        .fab { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: var(--transition); color: white; text-decoration: none; position: relative; }
+        .fab svg { width: 30px; height: 30px; fill: currentColor; }
+        .fab-wa { background-color: #25D366; animation: pulse-green 2s infinite; }
+        .fab-call { background-color: var(--secondary); }
+        .fab:hover { transform: scale(1.1); }
+
+        /* ================= AI CHATBOT WIDGET ================= */
+        .chat-widget-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-family: var(--font-body);
+        }
+
+        .chat-toggle-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transition: var(--transition);
+        }
+        
+        .chat-toggle-btn:hover {
+            transform: scale(1.1);
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        .chat-toggle-btn svg { width: 30px; height: 30px; fill: currentColor; }
+
+        .chat-window {
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+            width: 350px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(201, 162, 77, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .chat-window.open {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(0);
+        }
+
+        .chat-header {
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        .chat-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chat-header h3::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #25D366;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #25D366;
+        }
+
+        .close-chat {
+            color: var(--white);
+            cursor: pointer;
+            font-size: 1.5rem;
+            line-height: 1;
+            transition: var(--transition);
+        }
+
+        .close-chat:hover { color: #ff6b6b; }
+
+        .chat-body {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(255, 253, 248, 0.8);
+        }
+
+        .chat-body::-webkit-scrollbar { width: 6px; }
+        .chat-body::-webkit-scrollbar-thumb { background: rgba(201, 162, 77, 0.5); border-radius: 3px; }
+
+        .chat-bubble {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        .chat-bubble.bot {
+            background: var(--primary);
+            color: var(--white);
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+        }
+
+        .chat-bubble.user {
+            background: var(--secondary);
+            color: var(--primary);
+            font-weight: 500;
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+        }
+
+        .typing-indicator {
+            display: none;
+            align-self: flex-start;
+            background: #e0e0e0;
+            padding: 10px 15px;
+            border-radius: 15px;
+            border-bottom-left-radius: 2px;
+            margin-bottom: 15px;
+        }
+
+        .typing-indicator span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+
+        .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes bounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+
+        .chat-input-area {
+            display: flex;
+            padding: 15px;
+            background: var(--white);
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .chat-input-area input {
+            flex-grow: 1;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            color: var(--text-main);
+            padding: 10px 15px;
+            border-radius: 30px;
+            margin-right: 10px;
+        }
+
+        .chat-input-area input:focus { border-color: var(--secondary); background: var(--white); }
+
+        .chat-send-btn {
+            background: var(--secondary);
+            color: var(--primary);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .chat-send-btn:hover { background: var(--primary); color: var(--secondary); transform: scale(1.05); }
+        .chat-send-btn svg { width: 20px; height: 20px; fill: currentColor; transform: translateX(2px); }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* ================= RESPONSIVE DESIGN ================= */
+        @media (max-width: 992px) {
+            .hero-content h1 { font-size: 3.5rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .showcase-section, .showcase-section.reverse { grid-template-columns: 1fr; display: flex; flex-direction: column; }
+            .showcase-img { min-height: 300px; }
+            .showcase-text { padding: 50px 20px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .gallery-content-area { height: 500px; }
+        }
+
+        @media (max-width: 768px) {
+            header.navbar {
+            height:60px;
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 1000;
+            padding: 0px 0;
+            transition: var(--transition);
+            background: rgba(15, 61, 46, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1400px; margin: 0 auto; }
+        .logo { display: block; height: 60px; transition: var(--transition); }
+        .logo img { height: 100%; width: auto; display: block; object-fit:cover; }
+        header.navbar.scrolled .logo { height: 60px; }
+            .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background: var(--primary); flex-direction: column; padding: 0px 0; gap: 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: 0.4s ease-in-out; }
+            .nav-links.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content h2 { font-size: 1.2rem; }
+            .hero-buttons { flex-direction: column; }
+            .form-row { grid-template-columns: 1fr; }
+            .gallery-content-area { height: 400px; }
+            .section-title { font-size: 2.2rem; }
+            .fab-container { bottom: 20px; right: 20px; }
+            .fab { width: 50px; height: 50px; }
+            .fab svg { width: 25px; height: 25px; }
+            .chat-widget-container { bottom: 20px; left: 20px; }
+            .chat-toggle-btn { width: 50px; height: 50px; }
+            .chat-window { width: calc(100vw - 40px); height: 450px; }
+            .testi-card { padding: 40px 20px; }
+            .testi-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Sri Rameshwar Paradise Logo">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobileToggle">☰</div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div class="hero-slider" id="heroSlider">
+            <!-- Images representing Wedding, Resort, Banquet -->
+            <div class="hero-slide active" style="background-image: url('images/e3.webp');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('images/g8.webp');"></div>
+            <div class="hero-slide" style="background-image: url('images/b4.webp');"></div>
+        <div class="hero-slide" style="background-image: url('images/r1.webp');"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Sri Rameshwar Paradise</h1>
+        <h2 style="font-weight: 700;">Perfect Venues For Every Occasion</h2>
+        <p>Celebrate life's beautiful moments in our elegant lawns, banquet spaces, and luxurious rooms crafted for unforgettable experiences.</p>
+        <div class="hero-buttons">
+                <a href="#booking" class="btn btn-gold" onclick="selectBookingType('event')">Book Event</a>
+                <a href="#booking" class="btn btn-outline" onclick="selectBookingType('room')">Book Room</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENUE HIGHLIGHTS -->
+    <section id="highlights">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-text">Years of Excellence</div>
+                </div>
+                <div class="stat-item reveal" style="transition-delay: 0.1s;">
+                    <div class="stat-number">5</div>
+                    <div class="stat-text">Star Rated Venue</div>
+                </div>
+                <div class="stat-item reveal" style="transition-delay: 0.2s;">
+                    <div class="stat-number">2</div>
+                    <div class="stat-text">Premium Venues</div>
+                </div>
+                <div class="stat-item reveal" style="transition-delay: 0.3s;">
+                    <div class="stat-number">2500</div>
+                    <div class="stat-text">Max Guest Capacity</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number">20</div>
+                    <div class="stat-text">Luxury Rooms</div>
+                </div>
+                <div class="stat-item reveal" style="transition-delay: 0.1s;">
+                    <div class="stat-number">₹1.5k</div>
+                    <div class="stat-text">Starting Price</div>
+                </div>
+                <div class="stat-item reveal" style="transition-delay: 0.2s;">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">Vehicle Parking</div>
+                </div>
+                <div class="stat-item reveal" style="transition-delay: 0.3s;">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-text">In-House Services</div>
+                </div>
+            </div>
+            <div class="text-center">
+                <!-- <span style="color: #ff6b6b; font-weight: 500; border: 1px solid rgba(255, 107, 107, 0.5); padding: 6px 20px; border-radius: 30px; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; background: rgba(255, 107, 107, 0.05);">
+                    🚫 Alcohol Not Allowed
+                </span> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about" class="section-padding">
+        <div class="container about-grid">
+            <div class="about-img reveal">
+                <img src="images/home.webp" alt="About Sri Rameshwar Paradise">
+            </div>
+            <div class="about-content reveal">
+                <h2 class="section-title">About Sri Rameshwar Paradise</h2>
+                <p>Sri Rameshwar Paradise is a premium event destination located in the vibrant surroundings of Varanasi, offering elegant lawns, banquet facilities, and comfortable accommodations under one roof. Designed to host everything from intimate family gatherings to grand celebrations, the venue combines luxury, convenience, and exceptional hospitality to create unforgettable experiences.</p>
+                <p>With over 5 years of excellence in hosting memorable events, Sri Rameshwar Paradise has become a preferred choice for weddings, receptions, engagements, corporate meetings, birthday celebrations, anniversaries, haldi ceremonies, mehendi functions, and other special occasions.</p>
+                <p>The venue features both indoor and outdoor event spaces, allowing guests to choose the perfect setting for their celebrations. Guests can enjoy beautifully maintained lawns, an elegant banquet hall, luxurious air-conditioned rooms, ample parking facilities, professional event support, in-house catering, decoration services, and premium hospitality.</p>
+                <a href="#facilities" class="btn btn-gold" style="margin-top: 20px;">Explore Spaces</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Why Choose Us</h2>
+                <p class="section-subtitle">Excellence delivered in every detail</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item reveal"><div class="feature-icon">✓</div>Prime Location In Varanasi</div>
+                <div class="feature-item reveal"><div class="feature-icon">✓</div>Indoor & Outdoor Event Spaces</div>
+                <div class="feature-item reveal"><div class="feature-icon">✓</div>Luxury Accommodation</div>
+                <div class="feature-item reveal"><div class="feature-icon">✓</div>In-House Catering</div>
+                <div class="feature-item reveal"><div class="feature-icon">✓</div>Professional Decoration</div>
+                <div class="feature-item reveal"><div class="feature-icon">✓</div>Spacious Parking</div>
+                <div class="feature-item reveal"><div class="feature-icon">✓</div>Event Management Support</div>
+                <div class="feature-item reveal"><div class="feature-icon">✓</div>Elegant Venue Design</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITIES OVERVIEW -->
+    <section id="facilities" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Our Premium Facilities</h2>
+                <p class="section-subtitle">Spaces designed for memories</p>
+            </div>
+            <div class="facilities-grid">
+                <!-- Crown Lawn -->
+                <div class="facility-card reveal">
+                    <div class="facility-img">
+                        <img src="images/l2.webp" alt="Crown Lawn">
+                    </div>
+                    <div class="facility-content">
+                        <span class="capacity-badge">Capacity: 2500 Guests</span>
+                        <h3>Crown Lawn</h3>
+                        <p>A premium open-air venue perfect for grand weddings, large receptions, and major corporate events under the stars.</p>
+                        <a href="#crown-lawn" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Explore</a>
+                    </div>
+                </div>
+                <!-- Sagwan Lawn -->
+                <div class="facility-card reveal" style="transition-delay: 0.1s;">
+                    <div class="facility-img">
+                        <img src="images/2.webp" alt="Sagwan Lawn">
+                    </div>
+                    <div class="facility-content">
+                        <span class="capacity-badge">Capacity: 500 Guests</span>
+                        <h3>Sagwan Lawn</h3>
+                        <p>Beautifully landscaped intimate area ideal for family functions, engagement ceremonies, and birthday parties.</p>
+                        <a href="#sagwan-lawn" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Explore</a>
+                    </div>
+                </div>
+                <!-- Banquet Hall -->
+                <div class="facility-card reveal" style="transition-delay: 0.2s;">
+                    <div class="facility-img">
+                        <img src="images/b2.webp" alt="SRP Banquet Hall">
+                    </div>
+                    <div class="facility-content">
+                        <span class="capacity-badge">Capacity: 150-250 Guests</span>
+                        <h3>SRP Banquet Hall</h3>
+                        <p>Elegant indoor AC hall perfect for sophisticated gatherings, equipped with stage setup and dining arrangements.</p>
+                        <a href="#banquet-hall" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Explore</a>
+                    </div>
+                </div>
+                <!-- Rooms -->
+                <div class="facility-card reveal" style="transition-delay: 0.3s;">
+                    <div class="facility-img">
+                        <img src="images/r2.webp" alt="Luxury Rooms">
+                    </div>
+                    <div class="facility-content">
+                        <span class="capacity-badge">20 Rooms Available</span>
+                        <h3>Luxury Rooms</h3>
+                        <p>Comfortable stay experience with AC, Wi-Fi, and 24/7 service, ideal for wedding guests and business travelers.</p>
+                        <a href="#luxury-rooms" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILED SHOWCASES -->
+    
+    <!-- Crown Lawn Showcase -->
+    <!-- <div id="crown-lawn" class="showcase-section">
+        <div class="showcase-img" style="background-image: url('images/l2.webp');"></div>
+        <div class="showcase-text reveal">
+            <span class="capacity-badge">Capacity: 2500 Guests</span>
+            <h2>Crown Lawn</h2>
+            <p>Our largest and most magnificent open-air venue, designed for celebrations on a grand scale. The expansive green canvas allows for breathtaking decor setups.</p>
+            <ul class="showcase-list">
+                <li>Premium Open-Air Venue</li>
+                <li>Grand Wedding Functions</li>
+                <li>Large Scale Receptions</li>
+                <li>Major Corporate Events</li>
+            </ul>
+            <a href="#booking" class="btn btn-gold" style="align-self: flex-start; margin-top: 20px;">Book Crown Lawn</a>
+        </div>
+    </div> -->
+
+    <!-- Sagwan Lawn Showcase -->
+    <!-- <div id="sagwan-lawn" class="showcase-section reverse">
+        <div class="showcase-img" style="background-image: url('images/h2.webp');"></div>
+        <div class="showcase-text reveal">
+            <span class="capacity-badge">Capacity: 500 Guests</span>
+            <h2>Sagwan Lawn</h2>
+            <p>A beautifully landscaped, intimate area enveloped by nature. Perfect for events where warmth and closeness are key.</p>
+            <ul class="showcase-list">
+                <li>Beautiful Landscaped Area</li>
+                <li>Intimate Celebrations</li>
+                <li>Family Functions & Birthdays</li>
+                <li>Engagement Ceremonies</li>
+            </ul>
+            <a href="#booking" class="btn btn-gold" style="align-self: flex-start; margin-top: 20px;">Book Sagwan Lawn</a>
+        </div>
+    </div> -->
+
+    <!-- Banquet Hall Showcase -->
+    <!-- <div id="banquet-hall" class="showcase-section">
+        <div class="showcase-img" style="background-image: url('images/b4.webp');"></div>
+        <div class="showcase-text reveal">
+            <span class="capacity-badge">Capacity: 150-250 Guests</span>
+            <h2>Elegant Banquet Hall</h2>
+            <p>Experience climate-controlled luxury in our elegantly designed banquet hall. Complete with comprehensive event amenities.</p>
+            <div class="price-tag">Booking Price: ₹51,000</div>
+            <p style="font-weight: bold; color: var(--primary);">Food Package: ₹1200 Per Plate (Min 100 Guests)</p>
+            <ul class="showcase-list">
+                <li>Stage Setup & Basic Backdrop</li>
+                <li>Seating & Round Tables Arrangement</li>
+                <li>Flower Decoration</li>
+                <li>Dining Arrangement & Event Staff</li>
+            </ul>
+            <a href="#booking" class="btn btn-gold" style="align-self: flex-start; margin-top: 20px;">Book Banquet Hall</a>
+        </div>
+    </div> -->
+
+    <!-- Luxury Rooms Showcase -->
+    <!-- <div id="luxury-rooms" class="showcase-section reverse">
+        <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80');"></div>
+        <div class="showcase-text reveal">
+            <span class="capacity-badge">20 Rooms Available</span>
+            <h2>Comfortable Stay Experience</h2>
+            <p>Retreat into absolute comfort. Our luxury rooms provide a serene environment equipped with modern amenities for a perfect stay.</p>
+            <div class="price-tag">Starting From ₹1,500/Night</div>
+            <ul class="showcase-list" style="display: grid; grid-template-columns: 1fr 1fr;">
+                <li>Air Conditioning</li>
+                <li>Free Wi-Fi</li>
+                <li>Room Service</li>
+                <li>Family Friendly</li>
+                <li>Business Friendly</li>
+                <li>Secure Premises</li>
+            </ul>
+            <a href="#booking" class="btn btn-gold" onclick="selectBookingType('room')" style="align-self: flex-start; margin-top: 20px;">Book A Room</a>
+        </div>
+    </div> -->
+
+    <!-- EVENT PACKAGES -->
+    <section id="packages" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Exclusive Event Packages</h2>
+                <p class="section-subtitle" style="color: rgba(201, 162, 77, 0.8);">Curated experiences for your special day</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Basic Engagement -->
+                <div class="pricing-card reveal">
+                    <h3 class="pack-title">Basic Engagement</h3>
+                    <div class="pack-subtitle">The Intimate Start</div>
+                    <div class="pack-price"><span>₹</span>7,19,999</div>
+                    <ul class="pack-features">
+                        <li>Up to 200 Guests</li>
+                        <li>2 Luxury Rooms Included</li>
+                        <li>Premium Veg Menu Catering</li>
+                        <li>Standard Decor Setup</li>
+                        <li>Dedicated Event Manager</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-package" onclick="selectPackage('Engagement')">Reserve Package</a>
+                </div>
+                
+                <!-- Gold Wedding -->
+                <div class="pricing-card reveal" style="transition-delay: 0.1s;">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3 class="pack-title">Gold Wedding</h3>
+                    <div class="pack-subtitle">The Grand Celebration</div>
+                    <div class="pack-price"><span>₹</span>16,30,000</div>
+                    <ul class="pack-features">
+                        <li>Up to 800 Guests</li>
+                        <li>15 Luxury Rooms Included</li>
+                        <li>Premium Veg Menu Catering</li>
+                        <li>Advanced Decor & Stage</li>
+                        <li>Wedding Insurance Included</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-package" onclick="selectPackage('Gold Wedding')">Reserve Package</a>
+                </div>
+                
+                <!-- Diamond Wedding -->
+                <div class="pricing-card reveal" style="transition-delay: 0.2s;">
+                    <h3 class="pack-title">Diamond Wedding</h3>
+                    <div class="pack-subtitle">The Royal Experience</div>
+                    <div class="pack-price"><span>₹</span>20,30,000</div>
+                    <ul class="pack-features">
+                        <li>Up to 900 Guests</li>
+                        <li>15 Luxury Rooms Included</li>
+                        <li>Premium Veg Menu Catering</li>
+                        <li>Grand Royal Decor Setup</li>
+                        <li>Wedding Insurance Included</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-package" onclick="selectPackage('Diamond Wedding')">Reserve Package</a>
+                </div>
+            </div>
+            
+            <div class="pricing-grid bottom-row">
+                <!-- Premium Birthday -->
+                <div class="pricing-card reveal">
+                    <h3 class="pack-title">Premium Birthday</h3>
+                    <div class="pack-subtitle">Memorable Milestones</div>
+                    <div class="pack-price"><span>₹</span>7,53,000</div>
+                    <ul class="pack-features">
+                        <li>Up to 200 Guests</li>
+                        <li>1 Luxury Room Included</li>
+                        <li>Premium Veg Menu Catering</li>
+                        <li>Custom Theme Decor</li>
+                        <li>In-house Sound System</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-package" onclick="selectPackage('Birthday')">Reserve Package</a>
+                </div>
+                
+                <!-- Premium Anniversary -->
+                <div class="pricing-card reveal" style="transition-delay: 0.1s;">
+                    <h3 class="pack-title">Premium Anniversary</h3>
+                    <div class="pack-subtitle">Timeless Romance</div>
+                    <div class="pack-price"><span>₹</span>9,96,000</div>
+                    <ul class="pack-features">
+                        <li>Up to 400 Guests</li>
+                        <li>2 Luxury Rooms Included</li>
+                        <li>Premium Veg Menu Catering</li>
+                        <li>Elegant Anniversary Decor</li>
+                        <li>Photography Lighting Setup</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-package" onclick="selectPackage('Anniversary')">Reserve Package</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM GALLERY (Tab-based) -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Premium Gallery</h2>
+                <p class="section-subtitle">A glimpse into our luxurious spaces</p>
+            </div>
+            
+            <div class="gallery-tabs-container reveal">
+                <button class="gallery-tab active" data-target="gal-entrance">Entrance</button>
+                <button class="gallery-tab" data-target="gal-garden">Garden & Lawn</button>
+                <button class="gallery-tab" data-target="gal-stage">Stage Decor</button>
+                <!-- <button class="gallery-tab" data-target="gal-haldi">Haldi & Mehendi</button> -->
+                <button class="gallery-tab" data-target="gal-rooms">Rooms</button>
+            </div>
+            
+            <div class="gallery-content-area reveal">
+                <!-- Entrance Slider -->
+                <div class="gallery-slider-group active" id="gal-entrance">
+                    <div class="g-slide" style="background-image: url('images/e2.webp')"><div class="g-caption">Grand Entrance</div></div>
+                    <!-- <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80')"><div class="g-caption">Lit Walkway</div></div> -->
+                    <div class="g-slide" style="background-image: url('images/e3.webp')"><div class="g-caption">Floral Gates</div></div>
+                    <!-- <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80')"><div class="g-caption">Evening Welcomes</div></div> -->
+                    <div class="g-slide" style="background-image: url('images/e1.webp')"><div class="g-caption">Royal Welcomes</div></div>
+                </div>
+                <!-- Garden Slider -->
+                <div class="gallery-slider-group" id="gal-garden">
+                    <div class="g-slide" style="background-image: url('images/g1.webp')"><div class="g-caption">Lush Green Lawns</div></div>
+                    <div class="g-slide" style="background-image: url('images/g8.webp')"><div class="g-caption">Open Air Setup</div></div>
+                    <div class="g-slide" style="background-image: url('images/g4.webp')"><div class="g-caption">Resort Grounds</div></div>
+                    <div class="g-slide" style="background-image: url('images/g6.webp')"><div class="g-caption">Evening Setup</div></div>
+                    <div class="g-slide" style="background-image: url('images/g5.webp')"><div class="g-caption">Garden Reception</div></div>
+                </div>
+                <!-- Stage Slider -->
+                <div class="gallery-slider-group" id="gal-stage">
+                    <div class="g-slide" style="background-image: url('images/s1.webp')"><div class="g-caption">Royal Stage</div></div>
+                    <div class="g-slide" style="background-image: url('images/s4.png')"><div class="g-caption">Floral Decor</div></div>
+                    <div class="g-slide" style="background-image: url('images/s3.webp')"><div class="g-caption">Elegant Setup</div></div>
+                    <div class="g-slide" style="background-image: url('images/l2.webp')"><div class="g-caption">Banquet Stage</div></div>
+                    <div class="g-slide" style="background-image: url('images/s2.webp')"><div class="g-caption">Grand Decor</div></div>
+                </div>
+                <!-- Haldi Slider -->
+                <!-- <div class="gallery-slider-group" id="gal-haldi">
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80')"><div class="g-caption">Yellow Themes</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80')"><div class="g-caption">Mehendi Vibes</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80')"><div class="g-caption">Intimate Gathering</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&q=80')"><div class="g-caption">Lawn Setup</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80')"><div class="g-caption">Floral Canopies</div></div>
+                </div> -->
+                <!-- Rooms Slider -->
+                <div class="gallery-slider-group" id="gal-rooms">
+                    <div class="g-slide" style="background-image: url('images/r1.webp')"><div class="g-caption">Luxury Bedding</div></div>
+                    <div class="g-slide" style="background-image: url('images/r2.webp')"><div class="g-caption">Spacious Interiors</div></div>
+                    <div class="g-slide" style="background-image: url('images/home.webp')"><div class="g-caption">Modern Amenities</div></div>
+                    <!-- <div class="g-slide" style="background-image: url('images/r4.webp')"><div class="g-caption">Comfortable Stay</div></div>
+                    <div class="g-slide" style="background-image: url('images/r5.webp')"><div class="g-caption">AC Rooms</div></div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox Element -->
+    <div id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Gallery Image">
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">What Our Guests Say</h2>
+                <p class="section-subtitle">Real experiences from Sri Rameshwar Paradise</p>
+            </div>
+            
+            <div class="testi-container-inner reveal">
+                <div class="testi-carousel-wrapper">
+                    <div class="testi-carousel" id="testi-carousel">
+                        <div class="testi-card">
+                            <div class="testi-quote-icon">“</div>
+                            <div class="stars">★★★★★</div>
+                            <p class="testi-text">"An excellent venue for weddings, receptions, birthday parties, corporate events, and family functions. The lawn is spacious, well-maintained, and beautifully arranged."</p>
+                            <div class="testi-author">Siddhant Singhal</div>
+                        </div>
+                        <div class="testi-card">
+                            <div class="testi-quote-icon">“</div>
+                            <div class="stars">★★★★★</div>
+                            <p class="testi-text">"I organized my cousin's wedding here and was extremely impressed. The lawn is beautiful, the décor and stage setup were outstanding."</p>
+                            <div class="testi-author">Ritesh Yadav</div>
+                        </div>
+                        <div class="testi-card">
+                            <div class="testi-quote-icon">“</div>
+                            <div class="stars">★★★★★</div>
+                            <p class="testi-text">"Among the best event venues in Varanasi. The décor arrangements were remarkable and the owner was highly cooperative."</p>
+                            <div class="testi-author">Dr. R. S. Singh</div>
+                        </div>
+                        <div class="testi-card">
+                            <div class="testi-quote-icon">“</div>
+                            <div class="stars">★★★★★</div>
+                            <p class="testi-text">"Fantastic stay. Excellent ambience, professional staff, clean rooms, delicious food, and peaceful environment."</p>
+                            <div class="testi-author">Satyam Tiwari</div>
+                        </div>
+                        <div class="testi-card">
+                            <div class="testi-quote-icon">“</div>
+                            <div class="stars">★★★★★</div>
+                            <p class="testi-text">"A wonderful venue for events. The entire team is supportive and the atmosphere is perfect."</p>
+                            <div class="testi-author">Vicky Sonkar</div>
+                        </div>
+                        <div class="testi-card">
+                            <div class="testi-quote-icon">“</div>
+                            <div class="stars">★★★★★</div>
+                            <p class="testi-text">"We attended a reception function and had an amazing experience. The hospitality and decorations were magnificent."</p>
+                            <div class="testi-author">Anil Gajbhare</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING CENTER -->
+    <section id="booking" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Booking Center</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Plan your unforgettable moment with us</p>
+            </div>
+            
+            <div class="booking-container reveal">
+                <div class="booking-type-toggle">
+                    <button class="type-btn active" onclick="switchBookingForm('event')">Event Booking</button>
+                    <button class="type-btn" onclick="switchBookingForm('room')">Room Booking</button>
+                </div>
+
+                <!-- Event Booking Form -->
+                <form id="form-event" class="form-section active" onsubmit="submitBooking(event, 'event')">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="e_name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input type="tel" id="e_mobile" required placeholder="+91 XXXXX XXXXX">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Event Type</label>
+                            <select id="e_type" required>
+                                <option value="Wedding">Wedding</option>
+                                <option value="Reception">Reception</option>
+                                <option value="Engagement">Engagement</option>
+                                <option value="Birthday">Birthday Party</option>
+                                <option value="Corporate">Corporate Event</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Event Date</label>
+                            <input type="date" id="e_date" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Expected Guests</label>
+                            <input type="number" id="e_guests" required placeholder="e.g. 500">
+                        </div>
+                        <div class="form-group">
+                            <label>Select Package (Optional)</label>
+                            <select id="e_package">
+                                <option value="None">Custom / None</option>
+                                <option value="Diamond Wedding">Diamond Wedding</option>
+                                <option value="Gold Wedding">Gold Wedding</option>
+                                <option value="Premium Anniversary">Premium Anniversary</option>
+                                <option value="Premium Birthday">Premium Birthday</option>
+                                <option value="Basic Engagement">Basic Engagement</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Rooms Required</label>
+                        <input type="number" id="e_rooms" placeholder="Number of rooms (Max 20)">
+                    </div>
+                    <div class="form-group">
+                        <label>Special Requirements</label>
+                        <textarea id="e_req" rows="3" placeholder="Tell us about decor themes, catering preferences..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width: 100%;">Send Request via WhatsApp</button>
+                </form>
+
+                <!-- Room Booking Form -->
+                <form id="form-room" class="form-section" onsubmit="submitBooking(event, 'room')">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="r_name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input type="tel" id="r_mobile" required placeholder="+91 XXXXX XXXXX">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Check-In Date</label>
+                            <input type="date" id="r_checkin" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Check-Out Date</label>
+                            <input type="date" id="r_checkout" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Number Of Guests</label>
+                            <input type="number" id="r_guests" required min="1" placeholder="e.g. 2">
+                        </div>
+                        <div class="form-group">
+                            <label>Number Of Rooms</label>
+                            <input type="number" id="r_rooms" required min="1" max="20" placeholder="e.g. 1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Special Requirements</label>
+                        <textarea id="r_req" rows="3" placeholder="Extra bed, late check-in, etc."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width: 100%;">Send Request via WhatsApp</button>
+                </form>
+
+                <!-- Alternate Room Booking Options -->
+                <div class="room-partners">
+                    <!-- <div class="partner-card">
+                        <div class="partner-title">Book Direct</div>
+                        <div class="partner-price">Best Price Guaranteed</div>
+                        <a href="https://wa.me/919569945456" target="_blank" class="btn btn-outline" style="background-color: #25D366; color: white; border:none; width: 100%;">Book On WhatsApp</a>
+                    </div> -->
+                    <div class="partner-card">
+                        <div class="partner-title">Agoda</div>
+                        <div class="partner-price">Starting From ₹1,549/Night</div>
+                        <button class="btn btn-outline" style="background-color: #5392f9; color: white; border:none; width: 100%;">Book On Agoda</button>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-title">TripAdvisor</div>
+                        <div class="partner-price">Starting From ₹1,551/Night</div>
+                        <button class="btn btn-outline" style="background-color: #00aa6c; color: white; border:none; width: 100%;">View On TripAdvisor</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">We look forward to welcoming you</p>
+            </div>
+            
+            <div class="contact-grid reveal">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h4>Address</h4>
+                            <p>3/1, Padao Road, beside Indian Oil Petrol Pump, Sri Rameshwar Filling Station, Katesar, Ramnagar, Varanasi, Uttar Pradesh 221008</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-text">
+                            <h4>Phone Numbers</h4>
+                            <p><a href="tel:+918423083686">+91 8423083686</a><br><a href="tel:+919569945456">+91 9569945456</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-text">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/919569945456" target="_blank">+91 9569945456</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:info.srirameswarparadisee@gmail.com">info.srirameswarparadisee@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.4705573523647!2d83.03142207538481!3d25.28838977765242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31001f804bd7%3A0xd193371822d16ced!2sSri%20Rameshwar%20Paradise%20-%20Best%20Marriage%20Lawn%20In%20Varanasi!5e0!3m2!1sen!2sin!4v1781423329179!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.4705573523647!2d83.03142207538481!3d25.28838977765242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31001f804bd7%3A0xd193371822d16ced!2sSri%20Rameshwar%20Paradise%20-%20Best%20Marriage%20Lawn%20In%20Varanasi!5e0!3m2!1sen!2sin!4v1781423329179!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Sri Rameshwar Paradise</h3>
+                    <p>Perfect Venues For Every Occasion. Providing world-class hospitality, elegant banquet spaces, and luxury accommodations in the heart of Varanasi.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="color: var(--secondary); font-size: 1.5rem;">📱</a>
+                        <a href="#" style="color: var(--secondary); font-size: 1.5rem;">📸</a>
+                        <a href="#" style="color: var(--secondary); font-size: 1.5rem;">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#facilities">Facilities & Lawns</a></li>
+                        <li><a href="#packages">Event Packages</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>3/1, Padao Road, Katesar, Ramnagar, Varanasi, UP 221008</li>
+                        <li>+91 8423083686</li>
+                        <li>+91 9569945456</li>
+                        <li>info.srirameswarparadisee@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Sri Rameshwar Paradise. All Rights Reserved. Designed with Luxury.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING ACTION BUTTONS -->
+    <div class="fab-container">
+        <a href="tel:+918423083686" class="fab fab-call" title="Call Us">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </a>
+        <a href="https://wa.me/919569945456" target="_blank" class="fab fab-wa" title="WhatsApp Us">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+    </div>
+
+    <!-- AI CHATBOT WIDGET -->
+    <div class="chat-widget-container">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h3>SRP Assistant</h3>
+                <span class="close-chat" id="closeChat" title="Close Chat">&times;</span>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-bubble bot">
+                    Hello! I'm the Sri Rameshwar Paradise Virtual Concierge. I can assist you with details about our venues, packages, room bookings, and pricing. How can I help you today?
+                </div>
+                <div class="typing-indicator" id="typingIndicator">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Type your question..." onkeypress="handleChatEnter(event)">
+                <button class="chat-send-btn" onclick="sendMessage()" title="Send">
+                    <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="chat-toggle-btn" id="chatToggle" title="Chat with Assistant">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Hero Auto-Slider (Exactly 2 seconds)
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        let currentHero = 0;
+        setInterval(() => {
+            heroSlides[currentHero].classList.remove('active');
+            currentHero = (currentHero + 1) % heroSlides.length;
+            heroSlides[currentHero].classList.add('active');
+        }, 2000);
+
+        // Scroll Reveal Animations
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal(); // Trigger once on load
+
+        // Advanced Tab-Based Gallery
+        const tabs = document.querySelectorAll('.gallery-tab');
+        const sliderGroups = document.querySelectorAll('.gallery-slider-group');
+        let galleryInterval;
+
+        function startGallerySlider(groupId) {
+            clearInterval(galleryInterval);
+            const group = document.getElementById(groupId);
+            if(!group) return;
+            const slides = group.querySelectorAll('.g-slide');
+            let current = 0;
+            
+            // Ensure first slide is active initially
+            slides.forEach(s => s.classList.remove('active'));
+            slides[0].classList.add('active');
+
+            // Slide every 1.5 seconds
+            galleryInterval = setInterval(() => {
+                slides[current].classList.remove('active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('active');
+            }, 1500);
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab UI
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Update active slider group UI
+                const target = tab.getAttribute('data-target');
+                sliderGroups.forEach(g => g.classList.remove('active'));
+                document.getElementById(target).classList.add('active');
+
+                // Restart slider logic for the new group
+                startGallerySlider(target);
+            });
+        });
+
+        // Start initial gallery slider
+        startGallerySlider('gal-entrance');
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        document.querySelectorAll('.g-slide').forEach(slide => {
+            slide.addEventListener('click', (e) => {
+                // Extract background image url
+                const style = e.target.closest('.g-slide').style.backgroundImage;
+                const url = style.slice(4, -1).replace(/"/g, "");
+                lightboxImg.src = url;
+                lightbox.classList.add('show');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('show');
+        });
+        lightbox.addEventListener('click', (e) => {
+            if(e.target === lightbox) lightbox.classList.remove('show');
+        });
+
+        // Testimonials Auto-Carousel
+        const testiCarousel = document.getElementById('testi-carousel');
+        let testiIndex = 0;
+        const testiCards = document.querySelectorAll('.testi-card');
+        const totalTestimonials = testiCards.length;
+        
+        function moveTestimonials() {
+            if(!testiCarousel || totalTestimonials === 0) return;
+            
+            testiIndex++;
+            if (testiIndex >= totalTestimonials) testiIndex = 0;
+            
+            testiCarousel.style.transform = `translateX(-${testiIndex * 100}%)`;
+        }
+        setInterval(moveTestimonials, 4000); // 4 seconds
+        
+        window.addEventListener('resize', () => {
+            testiIndex = 0;
+            if(testiCarousel) testiCarousel.style.transform = `translateX(0)`;
+        });
+
+        // Booking Center Logic
+        function switchBookingForm(type) {
+            document.querySelectorAll('.type-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.form-section').forEach(form => form.classList.remove('active'));
+            
+            if(type === 'event') {
+                document.querySelector('.type-btn:nth-child(1)').classList.add('active');
+                document.getElementById('form-event').classList.add('active');
+            } else {
+                document.querySelector('.type-btn:nth-child(2)').classList.add('active');
+                document.getElementById('form-room').classList.add('active');
+            }
+        }
+
+        // Helper to select package from external buttons
+        function selectPackage(pkgName) {
+            switchBookingForm('event');
+            const select = document.getElementById('e_package');
+            for(let i=0; i<select.options.length; i++) {
+                if(select.options[i].value.includes(pkgName)) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+
+        // Helper to select booking type from external buttons
+        function selectBookingType(type) {
+            switchBookingForm(type);
+        }
+
+        // Submit Booking to WhatsApp
+        function submitBooking(e, type) {
+            e.preventDefault();
+            let message = "";
+            const phone = "919569945456"; 
+
+            if(type === 'event') {
+                const name = document.getElementById('e_name').value;
+                const mobile = document.getElementById('e_mobile').value;
+                const eventType = document.getElementById('e_type').value;
+                const date = document.getElementById('e_date').value;
+                const guests = document.getElementById('e_guests').value;
+                const pkg = document.getElementById('e_package').value;
+                const rooms = document.getElementById('e_rooms').value || "0";
+                const req = document.getElementById('e_req').value || "None";
+
+                message = `*New Event Booking Inquiry*%0A%0A*Name:* ${name}%0A*Mobile:* ${mobile}%0A*Event Type:* ${eventType}%0A*Date:* ${date}%0A*Expected Guests:* ${guests}%0A*Selected Package:* ${pkg}%0A*Rooms Required:* ${rooms}%0A*Special Requirements:* ${req}`;
+            } else {
+                const name = document.getElementById('r_name').value;
+                const mobile = document.getElementById('r_mobile').value;
+                const checkin = document.getElementById('r_checkin').value;
+                const checkout = document.getElementById('r_checkout').value;
+                const guests = document.getElementById('r_guests').value;
+                const rooms = document.getElementById('r_rooms').value;
+                const req = document.getElementById('r_req').value || "None";
+
+                message = `*New Room Booking Inquiry*%0A%0A*Name:* ${name}%0A*Mobile:* ${mobile}%0A*Check-In:* ${checkin}%0A*Check-Out:* ${checkout}%0A*Guests:* ${guests}%0A*Rooms:* ${rooms}%0A*Special Requirements:* ${req}`;
+            }
+
+            const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // ================= AI CHATBOT LOGIC =================
+        const chatToggle = document.getElementById('chatToggle');
+        const chatWindow = document.getElementById('chatWindow');
+        const closeChat = document.getElementById('closeChat');
+        const chatBody = document.getElementById('chatBody');
+        const chatInput = document.getElementById('chatInput');
+        const typingIndicator = document.getElementById('typingIndicator');
+
+        chatToggle.addEventListener('click', () => { chatWindow.classList.add('open'); chatInput.focus(); });
+        closeChat.addEventListener('click', () => chatWindow.classList.remove('open'));
+
+        function handleChatEnter(e) {
+            if(e.key === 'Enter') sendMessage();
+        }
+
+        function sendMessage() {
+            const userText = chatInput.value.trim();
+            if(!userText) return;
+
+            // 1. Add User Message
+            addMessageToChat(userText, 'user');
+            chatInput.value = '';
+
+            // 2. Show Typing Indicator
+            typingIndicator.style.display = 'block';
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            // 3. Process AI Response (Simulate slight delay for realism)
+            setTimeout(() => {
+                typingIndicator.style.display = 'none';
+                const botResponse = generateBotResponse(userText);
+                addMessageToChat(botResponse, 'bot');
+            }, 800 + Math.random() * 700); // 0.8s to 1.5s delay
+        }
+
+        function addMessageToChat(text, sender) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `chat-bubble ${sender}`;
+            msgDiv.innerHTML = text;
+            
+            // Insert before typing indicator
+            chatBody.insertBefore(msgDiv, typingIndicator);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        // Knowledge Base Rules Engine
+        function generateBotResponse(input) {
+            let query = input.toLowerCase();
+            
+            // Rules ordered by priority
+            if (query.match(/alcohol|liquor|drink|beer|wine|whiskey/)) {
+                return "Please note that <b>Alcohol is strictly NOT allowed</b> on the premises of Sri Rameshwar Paradise to maintain a family-friendly environment.";
+            }
+            if (query.match(/package|price|cost|diamond|gold|engagement|birthday/)) {
+                return "We offer premium packages:<br>• Basic Engagement: ₹7.19L<br>• Premium Birthday: ₹7.53L<br>• Premium Anniversary: ₹9.96L<br>• Gold Wedding: ₹16.3L<br>• Diamond Wedding: ₹20.3L<br><br>The standalone Banquet Hall booking is ₹51,000 (+₹1200/plate for food).";
+            }
+            if (query.match(/room|stay|night|accommodation|sleep|bed/)) {
+                return "We have <b>20 Luxury Rooms</b> available starting from ₹1,500/night. The rooms feature Air Conditioning, Free Wi-Fi, and 24/7 Room Service. Ideal for guests and business travelers.";
+            }
+            if (query.match(/venue|capacity|guest|lawn|hall|banquet|space|outdoor|indoor/)) {
+                return "We offer 3 beautiful spaces:<br>1. <b>Crown Lawn</b> (Open-Air, Up to 2500 Guests)<br>2. <b>Sagwan Lawn</b> (Landscaped, Up to 500 Guests)<br>3. <b>SRP Banquet Hall</b> (Elegant AC Hall, 150-250 Guests).";
+            }
+            if (query.match(/location|address|where|map|reach/)) {
+                return "We are perfectly located at: <b>3/1, Padao Road, beside Indian Oil Petrol Pump, Sri Rameshwar Filling Station, Katesar, Ramnagar, Varanasi, UP 221008.</b>";
+            }
+            if (query.match(/contact|phone|call|mobile|whatsapp|number/)) {
+                return "You can call us directly at <b>+91 8423083686</b> or reach out via WhatsApp at <b>+91 9569945456</b>.";
+            }
+            if (query.match(/food|catering|menu|veg|plate|eat/)) {
+                return "We provide premium <b>in-house pure vegetarian catering</b>. The standard food package for the banquet hall starts at ₹1200 per plate (minimum 100 guests).";
+            }
+            if (query.match(/decor|dj|music|parking|service|management/)) {
+                return "Our services include professional event management, elegant in-house decoration, stage setups, an in-house DJ, and spacious parking for over 50 vehicles.";
+            }
+            if (query.match(/hi|hello|hey|greetings|morning|evening/)) {
+                return "Hello there! Feel free to ask me anything about our venues, pricing, rooms, or how to book your upcoming event.";
+            }
+            if (query.match(/book|reserve|booking/)) {
+                return "You can book an event or a room by filling out the form in the 'Booking Center' section on our website, or by clicking the WhatsApp button to chat directly with our reservations team.";
+            }
+            
+            // Fallback response
+            return "I am equipped to answer questions about our pricing, packages, venues, room accommodations, policies, and contact information. Could you please provide a little more detail about what you are looking for?";
+        }
+    </script>
+</body>
+</html>
