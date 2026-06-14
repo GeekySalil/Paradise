@@ -158,47 +158,137 @@
         .hero-content p { font-size: 1.1rem; margin-bottom: 40px; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); font-weight: 300; line-height: 1.8; }
         .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
-        /* ================= VENUE HIGHLIGHTS (PREMIUM REDESIGN) ================= */
+        /* ================= VENUE HIGHLIGHTS (ULTRA PREMIUM REDESIGN) ================= */
         #highlights { 
-            background-color: var(--primary); 
-            padding: 80px 0; 
+            position: relative;
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, #061c14 100%);
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        #highlights::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(201,162,77,0.1) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .highlights-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .highlights-header h2 {
+            color: var(--secondary);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-family: var(--font-heading);
+            font-weight: 500;
+        }
+        .highlights-header p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
             position: relative;
         }
-        .stats-grid { 
-            display: grid; 
-            grid-template-columns: repeat(4, 1fr); 
-            border-top: 1px solid rgba(201, 162, 77, 0.2);
-            border-left: 1px solid rgba(201, 162, 77, 0.2);
-            margin-bottom: 30px;
-        }
-        .stat-item { 
-            padding: 50px 20px; 
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(201, 162, 77, 0.1);
+            border-radius: 12px;
+            padding: 40px 20px;
             text-align: center;
-            border-right: 1px solid rgba(201, 162, 77, 0.2);
-            border-bottom: 1px solid rgba(201, 162, 77, 0.2);
-            transition: var(--transition);
-            background: transparent;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
         }
-        .stat-item:hover { 
-            background: rgba(201, 162, 77, 0.03); 
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            transition: width 0.5s ease;
         }
-        .stat-number { 
-            font-family: var(--font-heading); 
-            font-size: 3.5rem; 
-            color: var(--secondary); 
-            margin-bottom: 10px; 
-            font-weight: 400; 
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(201, 162, 77, 0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .stat-card:hover::before {
+            width: 100%;
+        }
+
+        .stat-value {
+            font-family: var(--font-heading);
+            font-size: 3.8rem;
+            color: var(--secondary);
             line-height: 1;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            font-weight: 400;
         }
-        .stat-text { 
-            font-family: var(--font-body); 
-            font-size: 0.8rem; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            color: rgba(255,255,255,0.7); 
+        
+        .stat-value span {
+            font-size: 1.8rem;
+            opacity: 0.8;
+            font-family: var(--font-body);
+        }
+
+        .stat-label {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.7);
+            font-weight: 400;
+        }
+
+        .policy-badge-container {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .policy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 35px;
+            background: rgba(255, 107, 107, 0.05);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            border-radius: 50px;
+            color: #ff6b6b;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        
+        .policy-badge:hover {
+            background: rgba(255, 107, 107, 0.1);
+            border-color: rgba(255, 107, 107, 0.6);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.15);
         }
 
         /* ================= ABOUT US ================= */
@@ -393,7 +483,7 @@
         .form-section.active { display: block; animation: fadeIn 0.5s; }
 
         /* ================= ROOM BOOKING OPTIONS ================= */
-        .room-partners { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 30px; margin-top: 40px; }
+        .room-partners { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
         .partner-card { background: var(--white); padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #eee; }
         .partner-title { font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary); margin-bottom: 10px; }
         .partner-price { color: var(--secondary); font-weight: bold; margin-bottom: 20px; }
@@ -663,6 +753,11 @@
             .pricing-grid.bottom-row { display: flex; flex-direction: column; }
             .pricing-grid.bottom-row .pricing-card { width: 100%; max-width: none; }
             
+            /* Responsive Stats Update */
+            .stats-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .stat-card { padding: 30px 15px; }
+            .stat-value { font-size: 3rem; }
+            
             /* Responsive Contact */
             .contact-grid { padding: 30px; gap: 40px; }
             
@@ -686,6 +781,9 @@
             .contact-info h3 { font-size: 1.6rem; }
             .map-container { min-height: 250px; }
             
+            .stats-container { grid-template-columns: 1fr; }
+            .highlights-header h2 { font-size: 2rem; }
+            
             .fab-container { bottom: 20px; right: 20px; }
             .fab { width: 50px; height: 50px; }
             .fab svg { width: 25px; height: 25px; }
@@ -698,10 +796,6 @@
 
         @media (max-width: 480px) {
             /* Fix overly small grids and button layouts on small mobile */
-            .stats-grid { grid-template-columns: 1fr; border-left: none; }
-            .stat-item { border-left: 1px solid rgba(201, 162, 77, 0.2); padding: 30px 10px; }
-            .stat-number { font-size: 2.8rem; }
-            
             .hero-buttons { flex-direction: column; width: 100%; gap: 12px; }
             .hero-buttons .btn { width: 100%; text-align: center; }
             
@@ -710,6 +804,8 @@
             
             .pack-price { font-size: 2.2rem; }
             .pack-title { font-size: 1.5rem; }
+            
+            .policy-badge { padding: 12px 20px; font-size: 0.75rem; }
         }
     </style>
 </head>
@@ -759,44 +855,54 @@
     <!-- VENUE HIGHLIGHTS -->
     <section id="highlights">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item reveal">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-text">Years of Excellence</div>
+            <div class="highlights-header reveal">
+                <h2>The Grandeur at a Glance</h2>
+                <p>Experience uncompromised luxury</p>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card reveal">
+                    <div class="stat-value">5<span>+</span></div>
+                    <div class="stat-label">Years of Excellence</div>
                 </div>
-                <div class="stat-item reveal" style="transition-delay: 0.1s;">
-                    <div class="stat-number">5</div>
-                    <div class="stat-text">Star Rated Venue</div>
+                <div class="stat-card reveal" style="transition-delay: 0.1s;">
+                    <div class="stat-value">5<span>★</span></div>
+                    <div class="stat-label">Star Rated Venue</div>
                 </div>
-                <div class="stat-item reveal" style="transition-delay: 0.2s;">
-                    <div class="stat-number">2</div>
-                    <div class="stat-text">Premium Venues</div>
+                <div class="stat-card reveal" style="transition-delay: 0.2s;">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Premium Venues</div>
                 </div>
-                <div class="stat-item reveal" style="transition-delay: 0.3s;">
-                    <div class="stat-number">2500</div>
-                    <div class="stat-text">Max Guest Capacity</div>
+                <div class="stat-card reveal" style="transition-delay: 0.3s;">
+                    <div class="stat-value">2500</div>
+                    <div class="stat-label">Max Guest Capacity</div>
                 </div>
-                <div class="stat-item reveal">
-                    <div class="stat-number">20</div>
-                    <div class="stat-text">Luxury Rooms</div>
+                <div class="stat-card reveal">
+                    <div class="stat-value">20</div>
+                    <div class="stat-label">Luxury Rooms</div>
                 </div>
-                <div class="stat-item reveal" style="transition-delay: 0.1s;">
-                    <div class="stat-number">₹1.5k</div>
-                    <div class="stat-text">Starting Price</div>
+                <div class="stat-card reveal" style="transition-delay: 0.1s;">
+                    <div class="stat-value"><span>₹</span>1.5<span>k</span></div>
+                    <div class="stat-label">Starting Price</div>
                 </div>
-                <div class="stat-item reveal" style="transition-delay: 0.2s;">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-text">Vehicle Parking</div>
+                <div class="stat-card reveal" style="transition-delay: 0.2s;">
+                    <div class="stat-value">50<span>+</span></div>
+                    <div class="stat-label">Vehicle Parking</div>
                 </div>
-                <div class="stat-item reveal" style="transition-delay: 0.3s;">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-text">In-House Services</div>
+                <div class="stat-card reveal" style="transition-delay: 0.3s;">
+                    <div class="stat-value">100<span>%</span></div>
+                    <div class="stat-label">In-House Services</div>
                 </div>
             </div>
-            <div class="text-center">
-                <span style="color: #ff6b6b; font-weight: 500; border: 1px solid rgba(255, 107, 107, 0.5); padding: 6px 20px; border-radius: 30px; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; background: rgba(255, 107, 107, 0.05);">
-                    🚫 Alcohol Not Allowed
-                </span>
+            
+            <div class="policy-badge-container reveal" style="transition-delay: 0.4s;">
+                <div class="policy-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                    </svg>
+                    Alcohol Strictly Prohibited
+                </div>
             </div>
         </div>
     </section>
