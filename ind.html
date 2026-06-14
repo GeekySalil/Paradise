@@ -217,7 +217,7 @@
         .feature-icon { background: var(--primary); color: var(--secondary); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; }
 
         /* ================= FACILITIES & SPACES ================= */
-        .facilities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .facilities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
         .facility-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.08); transition: var(--transition); }
         .facility-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
         .facility-img { height: 250px; overflow: hidden; position: relative; }
@@ -393,18 +393,32 @@
         .form-section.active { display: block; animation: fadeIn 0.5s; }
 
         /* ================= ROOM BOOKING OPTIONS ================= */
-        .room-partners { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .room-partners { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 30px; margin-top: 40px; }
         .partner-card { background: var(--white); padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #eee; }
         .partner-title { font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary); margin-bottom: 10px; }
         .partner-price { color: var(--secondary); font-weight: bold; margin-bottom: 20px; }
 
         /* ================= CONTACT & LOCATION ================= */
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; background: var(--white); padding: 50px; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 60px; 
+            background: var(--white); 
+            padding: 50px; 
+            border-radius: 15px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05); 
+        }
         .contact-info h3 { font-size: 2rem; margin-bottom: 20px; }
         .contact-item { display: flex; gap: 15px; margin-bottom: 25px; align-items: flex-start; }
-        .contact-icon { color: var(--secondary); font-size: 1.5rem; margin-top: 5px; }
+        .contact-icon { color: var(--secondary); font-size: 1.5rem; margin-top: 5px; flex-shrink: 0; }
+        .contact-text { flex-grow: 1; min-width: 0; }
         .contact-text h4 { font-family: var(--font-body); font-size: 1.1rem; margin-bottom: 5px; }
-        .contact-text p, .contact-text a { color: #555; transition: color 0.3s; }
+        .contact-text p, .contact-text a { 
+            color: #555; 
+            transition: color 0.3s; 
+            word-break: break-word; 
+            overflow-wrap: anywhere; 
+        }
         .contact-text a:hover { color: var(--primary); }
         .map-container { border-radius: 10px; overflow: hidden; height: 100%; min-height: 350px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
@@ -635,15 +649,26 @@
         @media (max-width: 992px) {
             .hero-content h1 { font-size: 3.5rem; }
             .about-grid, .contact-grid { grid-template-columns: 1fr; }
-            .showcase-section, .showcase-section.reverse { grid-template-columns: 1fr; display: flex; flex-direction: column; }
+            
+            /* Responsive Showcase Fixes */
+            .showcase-section, .showcase-section.reverse { grid-template-columns: 1fr; display: flex; flex-direction: column; direction: ltr; }
             .showcase-img { min-height: 300px; }
             .showcase-text { padding: 50px 20px; }
+            
             .footer-grid { grid-template-columns: 1fr; gap: 30px; }
             .gallery-content-area { height: 500px; }
             
             /* Responsive Packages */
-            .pricing-grid { grid-template-columns: 1fr; gap: 30px; }
+            .pricing-grid { grid-template-columns: 1fr; gap: 30px; display: flex; flex-direction: column; }
+            .pricing-grid.bottom-row { display: flex; flex-direction: column; }
             .pricing-grid.bottom-row .pricing-card { width: 100%; max-width: none; }
+            
+            /* Responsive Contact */
+            .contact-grid { padding: 30px; gap: 40px; }
+            
+            /* Stats Grid Fix for Tablet */
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-item { padding: 40px 15px; }
         }
 
         @media (max-width: 768px) {
@@ -652,10 +677,15 @@
             .mobile-toggle { display: block; }
             .hero-content h1 { font-size: 2.5rem; }
             .hero-content h2 { font-size: 1.2rem; }
-            .hero-buttons { flex-direction: column; }
             .form-row { grid-template-columns: 1fr; }
             .gallery-content-area { height: 400px; }
             .section-title { font-size: 2.2rem; }
+            
+            /* Enhanced Contact Responsive Adjustments */
+            .contact-grid { padding: 20px; gap: 30px; border-radius: 10px; }
+            .contact-info h3 { font-size: 1.6rem; }
+            .map-container { min-height: 250px; }
+            
             .fab-container { bottom: 20px; right: 20px; }
             .fab { width: 50px; height: 50px; }
             .fab svg { width: 25px; height: 25px; }
@@ -664,6 +694,22 @@
             .chat-window { width: calc(100vw - 40px); height: 450px; }
             .testi-card { padding: 40px 20px; }
             .testi-text { font-size: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            /* Fix overly small grids and button layouts on small mobile */
+            .stats-grid { grid-template-columns: 1fr; border-left: none; }
+            .stat-item { border-left: 1px solid rgba(201, 162, 77, 0.2); padding: 30px 10px; }
+            .stat-number { font-size: 2.8rem; }
+            
+            .hero-buttons { flex-direction: column; width: 100%; gap: 12px; }
+            .hero-buttons .btn { width: 100%; text-align: center; }
+            
+            .gallery-tabs-container { flex-direction: column; align-items: stretch; }
+            .gallery-tab { text-align: center; border-radius: 8px; }
+            
+            .pack-price { font-size: 2.2rem; }
+            .pack-title { font-size: 1.5rem; }
         }
     </style>
 </head>
