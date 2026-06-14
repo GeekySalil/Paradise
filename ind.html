@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Rameshwar Paradise | Perfect Venues for Every Occasion</title>
+    <title>Sri Rameshwar Paradise | Luxury Venues for Every Occasion</title>
     <meta name="description" content="Celebrate life's beautiful moments in our elegant lawns, banquet spaces, and luxurious rooms in Varanasi.">
-    <meta property="og:title" content="Sri Rameshwar Paradise">
-<meta property="og:description" content="Best Lawn, Hotel, Banquet for events in Varanasi">
-<meta property="og:image" content="https://pix8.agoda.net/hotelImages/88967467/0/e09a1956d7f2e7677b5cada2d794e7ab.jpg?ce=3&s=1024x">
-<meta property="og:url" content="https://yourdomain.com">
-<meta property="og:type" content="website">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon"
-      type="image/png"
-      href="images/logo-circle.png">
+
     <style>
         /* ================= VARIABLES ================= */
         :root {
@@ -127,22 +121,21 @@
 
         /* ================= NAVBAR ================= */
         header.navbar {
-            height: 75px;
             position: fixed;
             top: 0; left: 0; width: 100%;
             z-index: 1000;
-            padding: 0px 0;
+            padding: 20px 0;
             transition: var(--transition);
             background: rgba(15, 61, 46, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        header.navbar.scrolled { padding: 0; box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+        header.navbar.scrolled { padding: 10px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
         
         .nav-container { display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1400px; margin: 0 auto; }
-        .logo { display: block; height: 75px; transition: var(--transition); }
-        .logo img { height: 100%; width: auto; display: block; object-fit:cover; }
-        header.navbar.scrolled .logo { height: 75px; }
+        .logo { display: block; height: 55px; transition: var(--transition); }
+        .logo img { height: 100%; width: auto; display: block; object-fit: contain; }
+        header.navbar.scrolled .logo { height: 45px; }
         
         .nav-links { display: flex; gap: 30px; }
         .nav-links li a { color: var(--white); font-weight: 400; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); position: relative; }
@@ -239,7 +232,7 @@
         .showcase-section { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 80vh; background: var(--white); }
         .showcase-section.reverse { grid-template-columns: 1fr 1fr; direction: rtl; }
         .showcase-section.reverse > * { direction: ltr; }
-        /* .showcase-img { background-size:contain; background-position: center; background-attachment: fixed; min-height: 400px; } */
+        .showcase-img { background-size: cover; background-position: center; background-attachment: fixed; min-height: 400px; }
         .showcase-text { padding: 80px; display: flex; flex-direction: column; justify-content: center; }
         .showcase-text h2 { font-size: 2.8rem; margin-bottom: 15px; }
         .showcase-list { margin: 20px 0; }
@@ -247,7 +240,7 @@
         .showcase-list li::before { content: '✓'; color: var(--secondary); font-weight: bold; }
         .price-tag { font-size: 1.5rem; color: var(--primary); font-family: var(--font-heading); font-weight: bold; margin: 20px 0; }
 
-/* ================= EVENT PACKAGES (STUNNING REDESIGN) ================= */
+        /* ================= EVENT PACKAGES (STUNNING REDESIGN) ================= */
         #packages { 
             background: linear-gradient(135deg, var(--primary) 0%, #061c14 100%); 
             color: var(--white); 
@@ -322,9 +315,9 @@
         .gallery-tab.active, .gallery-tab:hover { background: var(--primary); color: var(--secondary); }
         
         .gallery-content-area { position: relative; height: 700px; border-radius: 15px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
-        .gallery-slider-group { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; transition: opacity 1.5s ease; }
+        .gallery-slider-group { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; transition: opacity 0.5s ease; }
         .gallery-slider-group.active { opacity: 1; pointer-events: all; z-index: 10; }
-        .g-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 2s ease; background-size: cover; background-position: center; cursor: zoom-in; }
+        .g-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.5s ease; background-size: cover; background-position: center; cursor: zoom-in; }
         .g-slide.active { opacity: 1; }
         .g-caption { position: absolute; bottom: 30px; left: 30px; background: rgba(15, 61, 46, 0.8); color: var(--white); padding: 10px 20px; border-radius: 5px; border-left: 3px solid var(--secondary); backdrop-filter: blur(5px); }
         
@@ -654,21 +647,6 @@
         }
 
         @media (max-width: 768px) {
-            header.navbar {
-            height:60px;
-            position: fixed;
-            top: 0; left: 0; width: 100%;
-            z-index: 1000;
-            padding: 0px 0;
-            transition: var(--transition);
-            background: rgba(15, 61, 46, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1400px; margin: 0 auto; }
-        .logo { display: block; height: 60px; transition: var(--transition); }
-        .logo img { height: 100%; width: auto; display: block; object-fit:cover; }
-        header.navbar.scrolled .logo { height: 60px; }
             .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background: var(--primary); flex-direction: column; padding: 20px 0; gap: 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: 0.4s ease-in-out; }
             .nav-links.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
             .mobile-toggle { display: block; }
@@ -695,7 +673,7 @@
     <header class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <img src="images/logo.png" alt="Sri Rameshwar Paradise Logo">
+                <img src="https://placehold.co/300x100/transparent/C9A24D?text=LOGO" alt="Sri Rameshwar Paradise Logo">
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#hero">Home</a></li>
@@ -713,16 +691,16 @@
     <section id="hero">
         <div class="hero-slider" id="heroSlider">
             <!-- Images representing Wedding, Resort, Banquet -->
-            <div class="hero-slide active" style="background-image: url('images/e3.webp');"></div>
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80');"></div>
             <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&q=80');"></div>
-            <div class="hero-slide" style="background-image: url('images/g8.webp');"></div>
-            <div class="hero-slide" style="background-image: url('images/b4.webp');"></div>
-        <div class="hero-slide" style="background-image: url('images/r1.webp');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80');"></div>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Sri Rameshwar Paradise</h1>
-        <h2 style="font-weight: 700;">Perfect Venues For Every Occasion</h2>
+        <h2>Perfect Venues For Every Occasion</h2>
         <p>Celebrate life's beautiful moments in our elegant lawns, banquet spaces, and luxurious rooms crafted for unforgettable experiences.</p>
         <div class="hero-buttons">
                 <a href="#booking" class="btn btn-gold" onclick="selectBookingType('event')">Book Event</a>
@@ -732,7 +710,7 @@
         </div>
     </section>
 
-    <!-- VENUE HIGHLIGHTS 
+    <!-- VENUE HIGHLIGHTS -->
     <section id="highlights">
         <div class="container">
             <div class="stats-grid">
@@ -770,18 +748,18 @@
                 </div>
             </div>
             <div class="text-center">
-                <!-- <span style="color: #ff6b6b; font-weight: 500; border: 1px solid rgba(255, 107, 107, 0.5); padding: 6px 20px; border-radius: 30px; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; background: rgba(255, 107, 107, 0.05);">
+                <span style="color: #ff6b6b; font-weight: 500; border: 1px solid rgba(255, 107, 107, 0.5); padding: 6px 20px; border-radius: 30px; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; background: rgba(255, 107, 107, 0.05);">
                     🚫 Alcohol Not Allowed
-                </span> 
+                </span>
             </div>
         </div>
-    </section>-->
+    </section>
 
     <!-- ABOUT US -->
     <section id="about" class="section-padding">
         <div class="container about-grid">
             <div class="about-img reveal">
-                <img src="images/home.webp" alt="About Sri Rameshwar Paradise">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80" alt="About Sri Rameshwar Paradise">
             </div>
             <div class="about-content reveal">
                 <h2 class="section-title">About Sri Rameshwar Paradise</h2>
@@ -824,7 +802,7 @@
                 <!-- Crown Lawn -->
                 <div class="facility-card reveal">
                     <div class="facility-img">
-                        <img src="images/l2.webp" alt="Crown Lawn">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80" alt="Crown Lawn">
                     </div>
                     <div class="facility-content">
                         <span class="capacity-badge">Capacity: 2500 Guests</span>
@@ -836,7 +814,7 @@
                 <!-- Sagwan Lawn -->
                 <div class="facility-card reveal" style="transition-delay: 0.1s;">
                     <div class="facility-img">
-                        <img src="images/2.webp" alt="Sagwan Lawn">
+                        <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&q=80" alt="Sagwan Lawn">
                     </div>
                     <div class="facility-content">
                         <span class="capacity-badge">Capacity: 500 Guests</span>
@@ -848,7 +826,7 @@
                 <!-- Banquet Hall -->
                 <div class="facility-card reveal" style="transition-delay: 0.2s;">
                     <div class="facility-img">
-                        <img src="images/b2.webp" alt="SRP Banquet Hall">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80" alt="SRP Banquet Hall">
                     </div>
                     <div class="facility-content">
                         <span class="capacity-badge">Capacity: 150-250 Guests</span>
@@ -860,7 +838,7 @@
                 <!-- Rooms -->
                 <div class="facility-card reveal" style="transition-delay: 0.3s;">
                     <div class="facility-img">
-                        <img src="images/r2.webp" alt="Luxury Rooms">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80" alt="Luxury Rooms">
                     </div>
                     <div class="facility-content">
                         <span class="capacity-badge">20 Rooms Available</span>
@@ -876,8 +854,8 @@
     <!-- DETAILED SHOWCASES -->
     
     <!-- Crown Lawn Showcase -->
-    <!-- <div id="crown-lawn" class="showcase-section">
-        <div class="showcase-img" style="background-image: url('images/l2.webp');"></div>
+    <div id="crown-lawn" class="showcase-section">
+        <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80');"></div>
         <div class="showcase-text reveal">
             <span class="capacity-badge">Capacity: 2500 Guests</span>
             <h2>Crown Lawn</h2>
@@ -890,11 +868,11 @@
             </ul>
             <a href="#booking" class="btn btn-gold" style="align-self: flex-start; margin-top: 20px;">Book Crown Lawn</a>
         </div>
-    </div> -->
+    </div>
 
     <!-- Sagwan Lawn Showcase -->
-    <!-- <div id="sagwan-lawn" class="showcase-section reverse">
-        <div class="showcase-img" style="background-image: url('images/h2.webp');"></div>
+    <div id="sagwan-lawn" class="showcase-section reverse">
+        <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&q=80');"></div>
         <div class="showcase-text reveal">
             <span class="capacity-badge">Capacity: 500 Guests</span>
             <h2>Sagwan Lawn</h2>
@@ -907,11 +885,11 @@
             </ul>
             <a href="#booking" class="btn btn-gold" style="align-self: flex-start; margin-top: 20px;">Book Sagwan Lawn</a>
         </div>
-    </div> -->
+    </div>
 
     <!-- Banquet Hall Showcase -->
-    <!-- <div id="banquet-hall" class="showcase-section">
-        <div class="showcase-img" style="background-image: url('images/b4.webp');"></div>
+    <div id="banquet-hall" class="showcase-section">
+        <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80');"></div>
         <div class="showcase-text reveal">
             <span class="capacity-badge">Capacity: 150-250 Guests</span>
             <h2>Elegant Banquet Hall</h2>
@@ -926,10 +904,10 @@
             </ul>
             <a href="#booking" class="btn btn-gold" style="align-self: flex-start; margin-top: 20px;">Book Banquet Hall</a>
         </div>
-    </div> -->
+    </div>
 
     <!-- Luxury Rooms Showcase -->
-    <!-- <div id="luxury-rooms" class="showcase-section reverse">
+    <div id="luxury-rooms" class="showcase-section reverse">
         <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80');"></div>
         <div class="showcase-text reveal">
             <span class="capacity-badge">20 Rooms Available</span>
@@ -946,7 +924,7 @@
             </ul>
             <a href="#booking" class="btn btn-gold" onclick="selectBookingType('room')" style="align-self: flex-start; margin-top: 20px;">Book A Room</a>
         </div>
-    </div> -->
+    </div>
 
     <!-- EVENT PACKAGES -->
     <section id="packages" class="section-padding">
@@ -1050,50 +1028,50 @@
                 <button class="gallery-tab active" data-target="gal-entrance">Entrance</button>
                 <button class="gallery-tab" data-target="gal-garden">Garden & Lawn</button>
                 <button class="gallery-tab" data-target="gal-stage">Stage Decor</button>
-                <!-- <button class="gallery-tab" data-target="gal-haldi">Haldi & Mehendi</button> -->
+                <button class="gallery-tab" data-target="gal-haldi">Haldi & Mehendi</button>
                 <button class="gallery-tab" data-target="gal-rooms">Rooms</button>
             </div>
             
             <div class="gallery-content-area reveal">
                 <!-- Entrance Slider -->
                 <div class="gallery-slider-group active" id="gal-entrance">
-                    <div class="g-slide" style="background-image: url('images/e2.webp')"><div class="g-caption">Grand Entrance</div></div>
-                    <!-- <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80')"><div class="g-caption">Lit Walkway</div></div> -->
-                    <div class="g-slide" style="background-image: url('images/e3.webp')"><div class="g-caption">Floral Gates</div></div>
-                    <!-- <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80')"><div class="g-caption">Evening Welcomes</div></div> -->
-                    <div class="g-slide" style="background-image: url('images/e1.webp')"><div class="g-caption">Royal Welcomes</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80')"><div class="g-caption">Grand Entrance</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80')"><div class="g-caption">Lit Walkway</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80')"><div class="g-caption">Floral Gates</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80')"><div class="g-caption">Evening Welcomes</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80')"><div class="g-caption">Royal Welcomes</div></div>
                 </div>
                 <!-- Garden Slider -->
                 <div class="gallery-slider-group" id="gal-garden">
-                    <div class="g-slide" style="background-image: url('images/g1.webp')"><div class="g-caption">Lush Green Lawns</div></div>
-                    <div class="g-slide" style="background-image: url('images/g8.webp')"><div class="g-caption">Open Air Setup</div></div>
-                    <div class="g-slide" style="background-image: url('images/g4.webp')"><div class="g-caption">Resort Grounds</div></div>
-                    <div class="g-slide" style="background-image: url('images/g6.webp')"><div class="g-caption">Evening Setup</div></div>
-                    <div class="g-slide" style="background-image: url('images/g5.webp')"><div class="g-caption">Garden Reception</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&q=80')"><div class="g-caption">Lush Green Lawns</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80')"><div class="g-caption">Open Air Setup</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&q=80')"><div class="g-caption">Resort Grounds</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80')"><div class="g-caption">Evening Setup</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80')"><div class="g-caption">Garden Reception</div></div>
                 </div>
                 <!-- Stage Slider -->
                 <div class="gallery-slider-group" id="gal-stage">
-                    <div class="g-slide" style="background-image: url('images/s1.webp')"><div class="g-caption">Royal Stage</div></div>
-                    <div class="g-slide" style="background-image: url('images/s4.png')"><div class="g-caption">Floral Decor</div></div>
-                    <div class="g-slide" style="background-image: url('images/s3.webp')"><div class="g-caption">Elegant Setup</div></div>
-                    <div class="g-slide" style="background-image: url('images/l2.webp')"><div class="g-caption">Banquet Stage</div></div>
-                    <div class="g-slide" style="background-image: url('images/s2.webp')"><div class="g-caption">Grand Decor</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80')"><div class="g-caption">Royal Stage</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80')"><div class="g-caption">Floral Decor</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80')"><div class="g-caption">Elegant Setup</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80')"><div class="g-caption">Banquet Stage</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80')"><div class="g-caption">Grand Decor</div></div>
                 </div>
                 <!-- Haldi Slider -->
-                <!-- <div class="gallery-slider-group" id="gal-haldi">
+                <div class="gallery-slider-group" id="gal-haldi">
                     <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80')"><div class="g-caption">Yellow Themes</div></div>
                     <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80')"><div class="g-caption">Mehendi Vibes</div></div>
                     <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80')"><div class="g-caption">Intimate Gathering</div></div>
                     <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&q=80')"><div class="g-caption">Lawn Setup</div></div>
                     <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80')"><div class="g-caption">Floral Canopies</div></div>
-                </div> -->
+                </div>
                 <!-- Rooms Slider -->
                 <div class="gallery-slider-group" id="gal-rooms">
-                    <div class="g-slide" style="background-image: url('images/r1.webp')"><div class="g-caption">Luxury Bedding</div></div>
-                    <div class="g-slide" style="background-image: url('images/r2.webp')"><div class="g-caption">Spacious Interiors</div></div>
-                    <div class="g-slide" style="background-image: url('images/home.webp')"><div class="g-caption">Modern Amenities</div></div>
-                    <!-- <div class="g-slide" style="background-image: url('images/r4.webp')"><div class="g-caption">Comfortable Stay</div></div>
-                    <div class="g-slide" style="background-image: url('images/r5.webp')"><div class="g-caption">AC Rooms</div></div> -->
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80')"><div class="g-caption">Luxury Bedding</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&q=80')"><div class="g-caption">Spacious Interiors</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80')"><div class="g-caption">Modern Amenities</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&q=80')"><div class="g-caption">Comfortable Stay</div></div>
+                    <div class="g-slide" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80')"><div class="g-caption">AC Rooms</div></div>
                 </div>
             </div>
         </div>
@@ -1270,11 +1248,11 @@
 
                 <!-- Alternate Room Booking Options -->
                 <div class="room-partners">
-                    <!-- <div class="partner-card">
+                    <div class="partner-card">
                         <div class="partner-title">Book Direct</div>
                         <div class="partner-price">Best Price Guaranteed</div>
                         <a href="https://wa.me/919569945456" target="_blank" class="btn btn-outline" style="background-color: #25D366; color: white; border:none; width: 100%;">Book On WhatsApp</a>
-                    </div> -->
+                    </div>
                     <div class="partner-card">
                         <div class="partner-title">Agoda</div>
                         <div class="partner-price">Starting From ₹1,549/Night</div>
@@ -1333,8 +1311,7 @@
                 </div>
                 
                 <div class="map-container">
-                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.4705573523647!2d83.03142207538481!3d25.28838977765242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31001f804bd7%3A0xd193371822d16ced!2sSri%20Rameshwar%20Paradise%20-%20Best%20Marriage%20Lawn%20In%20Varanasi!5e0!3m2!1sen!2sin!4v1781423329179!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.4705573523647!2d83.03142207538481!3d25.28838977765242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31001f804bd7%3A0xd193371822d16ced!2sSri%20Rameshwar%20Paradise%20-%20Best%20Marriage%20Lawn%20In%20Varanasi!5e0!3m2!1sen!2sin!4v1781423329179!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14438.31885623091!2d83.0305886!3d25.3015112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2fd1f7b233a3%3A0xcba803d352611e3b!2sSri%20Rameshwar%20Paradise!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -1374,7 +1351,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2026 Sri Rameshwar Paradise. All Rights Reserved. Designed by <a href="https://www.sktechdevs.in" target="_blank">SK TechDevs</a>.
+                &copy; 2026 Sri Rameshwar Paradise. All Rights Reserved. Designed with Luxury.
             </div>
         </div>
     </footer>
