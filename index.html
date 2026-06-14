@@ -406,6 +406,27 @@
         .btn-package { width: 100%; padding: 15px; font-size: 0.85rem; letter-spacing: 2px; margin-top: auto; position: relative; z-index: 2; border: 1px solid var(--secondary); background: transparent; color: var(--secondary); }
         .btn-package:hover { background: var(--secondary); color: var(--white); }
 
+        /* ================= FACILITIES & SPACES (MERGED) ================= */
+        .facilities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+        .facility-card { display: flex; flex-direction: column; background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.08); transition: var(--transition); height: 100%; }
+        .facility-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .facility-img { height: 250px; overflow: hidden; position: relative; flex-shrink: 0; }
+        .facility-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .facility-card:hover .facility-img img { transform: scale(1.1); }
+        .facility-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
+        .facility-content h3 { font-size: 1.8rem; margin-bottom: 10px; }
+        .capacity-badge { display: inline-block; background: var(--primary); color: var(--secondary); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; align-self: flex-start; }
+        .facility-content p { color: #666; margin-bottom: 20px; }
+        
+        .facility-price { font-size: 1.3rem; color: var(--primary); font-family: var(--font-heading); font-weight: 600; margin: 15px 0 5px; }
+        .facility-sub-price { font-size: 0.85rem; font-weight: 600; color: var(--primary); margin-bottom: 15px; }
+        
+        .facility-list { margin: 10px 0 25px 0; padding: 0; list-style: none; font-size: 0.9rem; flex-grow: 1; }
+        .facility-list li { margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; color: #555; }
+        .facility-list li::before { content: '✓'; color: var(--secondary); font-weight: bold; flex-shrink: 0; }
+        
+        .facility-content .btn { width: 100%; text-align: center; margin-top: auto; }
+
         /* ================= PREMIUM GALLERY ================= */
         #gallery { background: var(--bg-color); }
         .gallery-tabs-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 40px; }
@@ -1005,6 +1026,7 @@
     </section>
 
     <!-- FACILITIES OVERVIEW -->
+    <!-- FACILITIES & SPACES (MERGED) -->
     <section id="facilities" class="section-padding">
         <div class="container">
             <div class="text-center reveal">
@@ -1012,54 +1034,96 @@
                 <p class="section-subtitle">Spaces designed for memories</p>
             </div>
             <div class="facilities-grid">
+                
                 <!-- Crown Lawn -->
                 <div class="facility-card reveal">
                     <div class="facility-img">
-                        <img src="images/l2.webp" alt="Crown Lawn">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80" alt="Crown Lawn">
                     </div>
                     <div class="facility-content">
                         <span class="capacity-badge">Capacity: 2500 Guests</span>
                         <h3>Crown Lawn</h3>
-                        <p>A premium open-air venue perfect for grand weddings, large receptions, and major corporate events under the stars.</p>
-                        <a href="#crown-lawn" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Explore</a>
+                        <p>Our largest open-air venue, designed for celebrations on a grand scale. The expansive green canvas allows for breathtaking decor setups.</p>
+                        
+                        <ul class="facility-list">
+                            <li>Premium Open-Air Venue</li>
+                            <li>Grand Wedding Functions</li>
+                            <li>Large Scale Receptions</li>
+                            <li>Major Corporate Events</li>
+                        </ul>
+                        
+                        <a href="#booking" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);" onclick="selectBookingType('event')">Book Crown Lawn</a>
                     </div>
                 </div>
+                
                 <!-- Sagwan Lawn -->
                 <div class="facility-card reveal" style="transition-delay: 0.1s;">
                     <div class="facility-img">
-                        <img src="images/2.webp" alt="Sagwan Lawn">
+                        <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&q=80" alt="Sagwan Lawn">
                     </div>
                     <div class="facility-content">
                         <span class="capacity-badge">Capacity: 500 Guests</span>
                         <h3>Sagwan Lawn</h3>
-                        <p>Beautifully landscaped intimate area ideal for family functions, engagement ceremonies, and birthday parties.</p>
-                        <a href="#sagwan-lawn" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Explore</a>
+                        <p>A beautifully landscaped, intimate area enveloped by nature. Perfect for events where warmth and closeness are key.</p>
+                        
+                        <ul class="facility-list">
+                            <li>Beautiful Landscaped Area</li>
+                            <li>Intimate Celebrations</li>
+                            <li>Family Functions & Birthdays</li>
+                            <li>Engagement Ceremonies</li>
+                        </ul>
+                        
+                        <a href="#booking" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);" onclick="selectBookingType('event')">Book Sagwan Lawn</a>
                     </div>
                 </div>
+                
                 <!-- Banquet Hall -->
                 <div class="facility-card reveal" style="transition-delay: 0.2s;">
                     <div class="facility-img">
-                        <img src="images/b2.webp" alt="SRP Banquet Hall">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80" alt="SRP Banquet Hall">
                     </div>
                     <div class="facility-content">
                         <span class="capacity-badge">Capacity: 150-250 Guests</span>
                         <h3>SRP Banquet Hall</h3>
-                        <p>Elegant indoor AC hall perfect for sophisticated gatherings, equipped with stage setup and dining arrangements.</p>
-                        <a href="#banquet-hall" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Explore</a>
+                        <p>Experience climate-controlled luxury in our elegantly designed AC hall. Complete with comprehensive event amenities.</p>
+                        
+                        <div class="facility-price">Booking: ₹51,000</div>
+                        <div class="facility-sub-price">Food: ₹1200 / Plate (Min 100)</div>
+                        
+                        <ul class="facility-list">
+                            <li>Stage Setup & Basic Backdrop</li>
+                            <li>Seating & Round Tables</li>
+                            <li>Flower Decoration</li>
+                            <li>Dining Arrangement & Staff</li>
+                        </ul>
+                        
+                        <a href="#booking" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);" onclick="selectBookingType('event')">Book Banquet Hall</a>
                     </div>
                 </div>
+                
                 <!-- Rooms -->
                 <div class="facility-card reveal" style="transition-delay: 0.3s;">
                     <div class="facility-img">
-                        <img src="images/r2.webp" alt="Luxury Rooms">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80" alt="Luxury Rooms">
                     </div>
                     <div class="facility-content">
                         <span class="capacity-badge">20 Rooms Available</span>
                         <h3>Luxury Rooms</h3>
-                        <p>Comfortable stay experience with AC, Wi-Fi, and 24/7 service, ideal for wedding guests and business travelers.</p>
-                        <a href="#luxury-rooms" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Explore</a>
+                        <p>Retreat into absolute comfort. Our luxury rooms provide a serene environment equipped with modern amenities for a perfect stay.</p>
+                        
+                        <div class="facility-price" style="margin-bottom: 20px;">From ₹1,500 / Night</div>
+                        
+                        <ul class="facility-list">
+                            <li>Air Conditioning & Free Wi-Fi</li>
+                            <li>24/7 Room Service</li>
+                            <li>Family & Business Friendly</li>
+                            <li>Secure Premises & Parking</li>
+                        </ul>
+                        
+                        <a href="#booking" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);" onclick="selectBookingType('room')">Book Luxury Room</a>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
